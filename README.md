@@ -1,6 +1,6 @@
  ## PROVA HACKTHON BARCELONA ACTIVA
 
- Aquesta prova esta fet en laravel (php framework).
+Aquesta prova està fet en laravel (php framework).
 
  ### Preparació 
 
@@ -18,7 +18,7 @@ Load files and clear any cache
 ```bash 
 composer dump-autoload
 ```
-Configurar la conexió a la base de dades
+Configurar la connexió a la base de dades
 
 crear `.env` a l'arrel del projecte
 ```php
@@ -49,5 +49,20 @@ php artisan migrate
 | `POST`    | `/activitat`               | Crea una nova `activitat`                                        | `{ "nom": "Basketball", "descripcio": "Sport Activity", "capacitat_maxima": 10 }`                                                                                               |  `message` `activitat` (JSON)                      |
 | `GET`      | `/activitats`                 | Torna totes les `activitat`                                 |                                     |  JSON array de `activitats`                     |
 | `POST`       | `/activitats/apuntar`                 | Apunta un usuari a una activitat                         | `{ "usuari_id": 1, "activitat_id": 1}`                                                                                                                |  `message`  (JSON)                         |
+
+### Punts relevants
+
+#### FACTORY PATTERN
+
+En les validacions de les peticions he aplicat el patró de disseny 'factory'
+
+`app/Validations/ValidationFactory`
+
+### Maneig d'errors personalitzats
+
+He creat diverses classes per diferenciar quin tipus d'error està passant
+
+`app/Exceptions/`
+
 
 
