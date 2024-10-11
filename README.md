@@ -17,7 +17,7 @@ composer install
 Load files and clear any cache
 ```bash 
 composer dump-autoload
-
+```
 Configurar la conexió a la base de dades
 
 crear `.env` a l'arrel del projecte
